@@ -1,0 +1,89 @@
+#:kivy 1.0
+
+<ItarPejoInit>:
+	orientation: "vertical"
+	horison: 1.388
+    
+    game_screen: game_screen
+    
+    game_area: game_area
+		
+    start: start
+	neutral_face: neutral
+    happy_face: happy
+	sad_face: sad
+	angry_face: angry
+	cry_face: cry
+    
+    source: "images/background.png"
+    
+    BoxLayout:
+        spacing: 10
+        orientation: 'vertical'
+        center: root.center_x, self.height 
+    
+		BoxLayout:
+			orientation: 'vertical'
+
+			Button:
+				id: start
+				text: "Start"
+
+			Button:
+				id: neutral
+				text: "Neutral"
+
+			Button:
+				id: happy
+				text: "Happy"
+
+			Button:
+				id: sad
+				text: "Sad"
+
+			Button:
+				id: angry
+				text: "Angry"
+
+			Button:
+				id: cry
+				text: "Cry"
+
+	Screen:
+		Image:
+			source: 'eyes_normal.png'
+			keep_ration: False
+			allow_stretch: False
+			opacity : 0.8
+			size_hint: 0.3, 0.4
+			pos_hint: {'center_x':0.5, 'center_y':0.75}
+    
+    Widget:
+        id: game_screen
+        size: root.size
+        
+        Widget:
+            id: game_area
+            size: root.size
+            
+            canvas:
+                Color:
+                    rgb: (1,1,1)
+                Rectangle:
+                    source: "images/background.png"
+                    size: root.size
+
+        GridLayout:
+            cols: 3
+            row_force_default: True
+            row_default_height: 100
+            width: root.width
+            height: 70
+            pos: (0,0)
+            
+            Widget:
+                width: 30          
+                
+            Widget:
+                width: 30
+

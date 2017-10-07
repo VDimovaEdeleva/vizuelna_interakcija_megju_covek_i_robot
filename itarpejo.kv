@@ -1,0 +1,57 @@
+#:kivy 1.0.9
+
+Objekti:
+#<Objekti@BoxLayout>:
+<Objekti>:
+	orientation: "horizontal"
+	BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+			height: "35dp"
+    		size_hint_y: None
+    		Button:
+    			text: "Start"
+    			on_press: root.start()
+    
+    		Button:
+    			text: "Neutral"
+    			on_press: root.transition_to_neutral()
+    
+    		Button:
+    			text: "Happy"
+    			on_press: root.transition_to_happy()
+    
+    		Button:
+    			text: "Sad"
+    			on_press: root.transition_to_sad()
+    
+    		Button:
+    			text: "Angry"
+    			on_press: root.transition_to_angry()
+    
+    		Button:
+    			text: "Cry"
+    			on_press: root.transition_to_cry()
+
+        BoxLayout:
+    		height: "35dp"
+    		size_hint_y: None
+    		Button:
+    			text: "A"
+    			on_press: root.a_sound()
+    
+    		Button:
+    			text: "E"
+    			on_press: root.e_sound()
+    
+    		Button:
+    			text: "I"
+    			on_press: root.i_sound()
+    
+    		Button:
+    			text: "O"
+				on_press: root.o_sound()
+    
+    		Button:
+    			text: "U"
+    			on_press: root.u_sound()
